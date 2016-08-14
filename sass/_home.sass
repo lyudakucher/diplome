@@ -1,0 +1,345 @@
+#home
+	// height: 100vh
+	background: 
+		image: url("../img/2-layers.jpg") 
+		size: cover
+		repeat: no-repeat
+		position: center 
+	position: relative
+	-ms-overflow-x: hidden 
+	overflow-x: hidden
+	z-index: 1
+
+	&::before
+		content: '<'
+		position: absolute
+		top: 49vh
+		left: 2% 
+		width: 49px
+		height: 57px
+		background-color: #212121
+		font-size: 42px
+		color: #FFF
+		font-family: 'Arial'
+		font-weight: 400
+		text-align: center
+		line-height: 56px
+		cursor: pointer
+		
+		+media(640)
+			display: none
+	
+	&::after
+		content: '>'
+		position: absolute
+		top: 49vh
+		right: 2% 
+		width: 49px
+		height: 57px
+		background-color: #212121
+		font-size: 42px
+		color: #FFF
+		font-family: 'Arial'
+		font-weight: 400
+		text-align: center
+		line-height: 56px
+		cursor: pointer
+		
+		+media(640)
+			display: none
+
+.home__container
+	padding: 0 2% 9.5%
+
+.home__header
+	padding: 2% 0
+	position: relative
+	border: none
+
+	&::before
+		content: ''
+		position: absolute
+		top: 0
+		bottom: 0
+		right: -200vw
+		left: -200vw   
+		background-color: rgba(27, 27, 27, 0.7)
+		z-index: -1
+	
+	+media(960)
+		padding: 30px 2%
+	
+	+media(640)
+		padding: 22.5px 2% 
+		
+	+media(480)
+		padding: 15px 2% 
+
+.home__logo
+	font-size: 34px
+	color: white
+	font-weight: 400
+	float: left
+	
+	+media(480)
+		font-size: 28px
+
+.home__logo__bigger
+	color: white
+	font-weight: 700
+
+.home__logo__bigger--yellow
+	color: #f39c12
+	font-weight: 700
+
+.home__menu
+	text-align: right
+	
+	+media(960)
+		display: none
+		position: absolute
+		background-color: rgba(0, 0, 0, 0.87) 
+		top: 90px
+		left: 0
+		width: 100vw  
+		margin: 0 -2%  
+		text-align: center
+		
+	+media (640)
+		top: 75px
+		
+	+media (480)
+		top: 60px
+
+.home__menu__item
+	line-height: 42px
+	color: #bbb
+	margin-right: 2.5%
+	cursor: pointer
+	text-decoration: none
+	font:
+		size: 20px
+		weight: 700
+	
+	&:hover
+		color: #f39c12
+	
+	+media(1440)
+		font-size: 18px
+		
+	+media(960)
+		display: block
+		border: 1px solid transparent
+		
+		&:hover
+			background-color: rgba(0, 0, 0, 0.73)
+			border: 1px solid #000
+
+label[for="nav-btn"]
+	position: absolute
+	top: 40px
+	right: 70px
+	width: 42px
+	height: 10px
+	border-top: 3px solid #bbb
+	border-bottom: 3px solid #bbb
+	cursor: pointer
+	padding-bottom: 10px
+	
+	&:after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0 
+		width: 42px
+		border-bottom: 3px solid #bbb
+		padding-top: 9px
+	
+	&:hover
+		border-bottom: 3px solid #f39c12
+		border-top: 3px solid #f39c12
+		&:after
+			border-bottom: 3px solid #f39c12
+	
+	+media (640)
+		top: 31px
+
+	+media (480)
+		top: 20px
+
+#nav-btn
+	display: none
+	
+	&:checked
+		+ .home__menu
+			display: block
+			// animation: visible
+
+label[for="nav-btn"]
+	display: none
+		
+	+media(960)
+		display: block
+		cursor: pointer
+
+.home__search
+	float: right
+
+.home__search__icon--fa
+	color: #bbb
+	cursor: pointer
+	
+	&:before
+		font-size: 24px
+		line-height: 42px
+
+	&:hover
+		color: #f39c12
+		
+.home__search__box
+	width: 252px
+	height: 40px
+	position: absolute
+	top: 100%
+	right: 0
+	font-size: 0
+	background: #fff
+	display: none
+
+#home__search__icon
+	display: none
+	
+	&:checked
+		+ .home__search__box
+			display: block
+	
+.home__search__placeholder
+	height: 40px
+	width: 212px
+	color: #b9b9b9
+	font:
+		family: Roboto
+		size: 17px
+		weight: 400
+	display: inline-block
+	border: none
+	position: relative
+
+.home__search__icon--fa-btn
+	width: 36px
+	height: 36px
+	background-color: #f39c12
+	text-align: center
+	vertical-align: middle
+	position: absolute
+	top: 2px
+	right: 2px
+	cursor: pointer
+	
+	&::before
+		line-height: 36px
+		color: #fff
+		font-size: 20px
+	
+	&:hover
+		background-color: rgb(226, 86, 22)
+	
+	&:active
+		background-color: rgb(226, 86, 22)
+
+.home__title
+	line-height: 72px
+	text-align: right
+	color: white
+	font:
+		weight: 700
+		size: 70px
+	padding: 24vh 0 21vh
+	font-size: 55px
+	
+	.home__title--light
+		font-size: 55px 
+	
+	+media(1440)
+		font-size: 49px
+		padding: 20vh 0 21vh
+		
+		.home__title--light
+			font-size: 49px
+
+	+media(1024)
+		font-size: 40px
+		padding: 20vh 0 21vh
+		line-height: 60px
+		
+		.home__title--light
+			font-size: 40px
+	
+	+media(960)
+		font-size: 38px
+		padding: 18vh 0 17vh
+		line-height: 50px 
+		
+		.home__title--light
+			font-size: 38px
+			
+	+media(640)
+		font-size: 30px
+		padding: 16vh 0 15vh
+		line-height: 40px 
+		
+		.home__title--light
+			font-size: 30px
+	
+	+media(480)
+		font-size: 25px
+		padding: 16vh 0 15vh
+		line-height: 29px 
+		
+		.home__title--light
+			font-size: 25px
+
+.home__title--light
+	color: #f39c12
+	font-weight: 300
+
+.btn--has-bg
+	font-family: 'Raleway'
+	text-transform: uppercase
+	color: #fff
+	margin: 0 11px
+	background-color: #f39c12
+	padding: 22px 
+	text-align: center
+	border: none
+	width: 217px
+	cursor: pointer
+	font-size: 20px 
+	
+	&:hover
+		background-color: rgb(226, 86, 22)
+	
+	&:active
+		background-color: rgb(226, 86, 22)
+		
+	+media(640)
+		font-size: 17px
+		padding: 18px
+		width: 188px
+	
+	+media(480)
+		font-size: 14px
+		padding: 16px
+		width: 160px  
+
+.btn--transparent
+	border: 2px solid white
+	background-color: rgba(28, 28, 28, 0.3)
+	padding: 20px
+	
+	+media(640)
+		padding: 16px
+	
+	+media(480)
+		padding: 14px
+		margin-bottom: 4%

@@ -1,0 +1,160 @@
+.gallery__title__underline	
+	margin-right: 29%
+	margin-left: 29%  
+    
+.gallery__sorting
+	text-align: center
+	padding: 0 
+
+.gallery__sorting__item
+	padding: 20px 0
+	font-size: 20px
+	color: #565656
+	text-decoration: none
+	display: inline-block
+	width: 165px
+	
+	&:hover
+		color: #fff
+		font-weight: 700
+		background-color: #f39c12
+		
+	+media(960)
+		font-size: 18px
+		width: 140px
+		
+	+media(768)
+		font-size: 16px 
+		width: 120px
+		padding: 15px 0
+	
+	+media(640)
+		font-size: 14px
+		width: 107px
+		padding: 10px 0
+
+.gallery__container
+	font-size: 0
+	padding: 0 1%
+	margin: 6% 0 0
+
+	:nth-of-type(4)
+		width: 22.7%
+		
+		+media(960)
+			width: 22%
+			
+	:nth-of-type(5)
+		width: 22.7%
+		
+		+media(960)
+			width: 22%
+		
+	:nth-of-type(6)
+		width: 22.7%
+		
+		+media(960)
+			width: 22%
+		
+	:nth-of-type(7)
+		width: 22.7%
+		
+		+media(960)
+			width: 22%
+	
+	+media(640)	
+		.gallery__item
+			width: 47%
+		
+		:nth-of-type(3)
+			width: 30.8%
+		
+		:nth-of-type(4)
+			width: 30.8%
+		
+		:nth-of-type(5)
+			width: 30.8%
+	
+	+media(480)
+		.gallery__item
+			width: 97% 
+
+
+.gallery__item
+	list-style-type: none
+	margin: 1%
+	position: relative
+	display: inline-block
+	width: 30.91%
+	&:hover
+		.gallery__item--hover
+			display: block 
+
+.gallery__item--hover
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	background-color: rgba(35, 35, 35, 0.5)
+	display: none
+
+.gallery__item__img
+	width: 100%
+
+.gallery__item__title-wrap
+	background-color: #232323
+	position: absolute
+	bottom: 0
+	left: 0
+	right: 0
+	padding: 4% 0 3% 0 
+
+.gallery__item__screen--fa
+	width: 30px
+	height: 30px
+	background-color: #f39c12 
+	border-radius: 100%
+	padding: 5%
+	float: right
+	margin: 3%
+	cursor: pointer
+	
+	+media(748)
+		font-size: medium
+		padding: 4%
+		
+	+media(480)
+		display: none
+	
+.gallery__screen__icon--fa:before
+	color: #fff
+	font-size: x-large
+	// margin: 15%
+	
+	+media(748)
+		font-size: medium
+
+.gallery__screen__icon--fa
+	+media(748)
+		margin: 17%
+		color: #fff
+			
+.gallery__item__title
+	font-size: 20px
+	margin: 0
+	
+	+media(768)
+		font-size: 18px 
+		
+	+media(480)
+		font-size: 14px 
+
+.gallery__item__description
+	font-size: 20px
+	
+	+media(768)
+		font-size: 14px 
+		
+	+media(480)
+		font-size: 12px 

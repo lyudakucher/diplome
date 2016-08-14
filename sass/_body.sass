@@ -1,0 +1,120 @@
+@viewport
+	width: device-width
+	zoom: 1
+	max-zoom: 2
+	
+@-webkit-viewport
+	width: device-width
+	zoom: 1
+	max-zoom: 2
+
+@-moz-viewport
+	width: device-width
+	zoom: 1
+	max-zoom: 2
+
+@-o-viewport
+	width: device-width
+	zoom: 1
+	max-zoom: 2
+	
+body
+	font-family: 'Arial'
+
+.section
+	width: 100%
+
+.container
+	max-width: 1170px
+	width: 96% 
+	margin: 0 auto
+	text-align: center
+	padding: 9.5% 2%
+	
+	+media(1440)
+		max-width: 960px
+
+.has-no-backdown
+	padding: 9.5% 2% 0
+
+.has-w-full
+	max-width: 96%
+
+.clearfix::after
+    content: ''
+    overflow: hidden
+    display: table
+    clear: both
+
+.title
+	text:
+		transform: uppercase
+		align: center
+	color: #383838
+	font:
+		family: 'Raleway'
+		size: 48px
+		weight: 700
+	color: #383838
+	
+	+media(1440)
+		font-size: 40px
+	
+	+media(1280)
+		font-size: 32px
+		
+	+media(960)
+		font-size: 28px
+		
+	+media(780)
+		font-size: 24px
+		
+	+media(640)
+		font-size: 20px	
+
+.is-white
+	color: #fff
+	
+.description
+	font-family: 'Arial'
+	color: #686767
+	font-weight: 400
+
+.title__underline
+	height: 1px
+	background-color: #f39c12
+	margin: 3% 10% 8.5%
+	position: relative
+	
+.title__underline__line
+	width: 40px
+	height: 5px
+	background-color: #f39c12
+	position: absolute
+	left: 50%
+	top: -2px
+	transform: translateX(-50%)
+	margin: 0
+	
+.is-transparent
+	background-color: transparent
+	
+.double-slider__control
+	text-align: center
+	padding: 5% 0 0 0
+
+.double-slider__control__item
+	width: 11px
+	height: 11px
+	display: inline-block
+	margin: 0 2px
+	background-color: #b7b7b7
+	-webkit-border-radius: 100%
+	        border-radius: 100%
+	cursor: pointer
+
+.double-slider__control__item--active
+	background-color: #414141
+
+.double-slider__control__item:hover
+	background-color: #414141
